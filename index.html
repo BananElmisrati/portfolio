@@ -766,19 +766,25 @@
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
 	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			const el = document.querySelector('.typewrite');
-			const text = el.getAttribute('data-text');
-			let i = 0;
-			function type() {
-				if (i < text.length) {
-					el.textContent += text.charAt(i);
-					i++;
-					setTimeout(type, 100);
-				}
-			}
-			type();
-		});
+	document.addEventListener('DOMContentLoaded', function () {
+  const el = document.querySelector('.typewrite');
+  if (!el) {
+    console.warn('No element with class .typewrite found.');
+    return; // stop if element not found
+  }
+  const text = el.getAttribute('data-text');
+  let i = 0;
+
+  function type() {
+    if (i < text.length) {
+      el.textContent += text.charAt(i);
+      i++;
+      setTimeout(type, 100);
+    }
+  }
+  type();
+});
+
 
 		document.addEventListener('DOMContentLoaded', () => {
 			const el = document.querySelector('.animated-text');
