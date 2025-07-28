@@ -75,7 +75,9 @@
 
 				<div class="col-twelve">
 
-					<h5>Hello, World.</h5>
+					<div class="typewrite-container">
+						<h5 class="typewrite" data-text="Hello, World."></h5>
+					</div>
 					<h1>I'm Banan El-misrati.</h1>
 
 					<p class="intro-position">
@@ -116,8 +118,11 @@
 
 					<!-- <img src="images/profile-pic.jpg" alt="Profile Picture"> -->
 
-					<p class="lead">Highly motivated software development engineer.Graduate in business information
-						technology. Ability to work under pressure in a high-pace environment.</p>
+					<p class="fade-in-on-scroll hidden-paragraph">
+						Highly motivated software development engineer. Graduate in business information technology.
+						Ability to work under pressure in a high-pace environment.
+					</p>
+
 				</div>
 
 			</div>
@@ -214,7 +219,8 @@
 
 		<div class="row button-section">
 			<div class="col-twelve">
-				<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Hire Me</a>
+				<a href="#contact" title="Hire Me"
+					class="button stroke smoothscroll animate-on-scroll fade-in-on-scroll">Hire Me</a>
 				<!-- <a href="#" title="Download CV" class="button button-primary">Download CV</a> -->
 			</div>
 		</div>
@@ -263,9 +269,14 @@
 						</div>
 
 						<div class="timeline-content">
-							<h4>Material-Insights</h4>
-							<p>Design , develop and maintain the company software and web applications ,using different
-								languages such as nextjs, javascript, sql, typescript.</p>
+							<h4>Material Insights</h4>
+							<p>Utilizing a diverse set of Programming Languages including React.js, Next.js,
+								JavaScript,Typescript and Java to create dynamic and efficient web applications.
+								
+							</p>
+							<p>
+								Managing relational and non-relational DBs such as MongoDB and Redis.
+							</p>
 						</div>
 
 					</div> <!-- /timeline-block -->
@@ -669,7 +680,7 @@
 
 			<div class="col-four tab-full">
 
-				<div class="icon">
+				<div class="icon button stroke smoothscroll animate-on-scroll fade-in-on-scroll">
 					<i class="icon-pin"></i>
 				</div>
 
@@ -695,8 +706,8 @@
 
 			<div class="col-four tab-full">
 
-				<div class="icon">
-					<i class="icon-phone"></i>
+				<div class="icon button stroke smoothscroll animate-on-scroll fade-in-on-scroll">
+					<i class="icon-phone "></i>
 				</div>
 
 				<h5>Call Me At</h5>
@@ -754,6 +765,70 @@
 	<script src="js/jquery-2.1.3.min.js"></script>
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const el = document.querySelector('.typewrite');
+			const text = el.getAttribute('data-text');
+			let i = 0;
+			function type() {
+				if (i < text.length) {
+					el.textContent += text.charAt(i);
+					i++;
+					setTimeout(type, 100);
+				}
+			}
+			type();
+		});
+
+		document.addEventListener('DOMContentLoaded', () => {
+			const el = document.querySelector('.animated-text');
+			const text = el.getAttribute('data-text');
+			let i = 0;
+
+			function typeFade() {
+				if (i < text.length) {
+					const span = document.createElement('span');
+					span.textContent = text[i];
+					span.style.opacity = 0;
+					el.appendChild(span);
+
+					setTimeout(() => {
+						span.style.transition = "opacity 0.2s ease-in";
+						span.style.opacity = 1;
+					}, 10);
+
+					i++;
+					setTimeout(typeFade, 25);
+				}
+			}
+
+			typeFade();
+		});
+
+
+
+
+
+		document.addEventListener('DOMContentLoaded', function () {
+			const faders = document.querySelectorAll('.fade-in-on-scroll');
+
+			const observer = new IntersectionObserver((entries, observer) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('visible');
+						observer.unobserve(entry.target); // Only run once
+					}
+				});
+			}, {
+				threshold: 0.1
+			});
+
+			faders.forEach(fader => {
+				observer.observe(fader);
+			});
+		});
+	</script>
+
 
 </body>
 
