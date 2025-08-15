@@ -2,6 +2,7 @@
   "name": "portfolioTemplate",
   "version": "2.0.0",
   "private": true,
+  "homepage": "https://bananelmisrati.github.io/portfolio/",   
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
@@ -29,7 +30,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",             
+    "deploy": "gh-pages -d build"           
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -49,6 +52,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.12"
+    "tailwindcss": "^4.1.12",
+    "gh-pages": "^5.0.0"                      
   }
 }
