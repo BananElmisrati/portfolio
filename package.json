@@ -2,7 +2,6 @@
   "name": "portfolioTemplate",
   "version": "2.0.0",
   "private": true,
-  "homepage": "https://bananelmisrati.github.io/portfolio/",   
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
@@ -55,4 +54,5 @@
     "tailwindcss": "^4.1.12",
     "gh-pages": "^5.0.0"                      
   }
+  
 }

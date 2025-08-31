@@ -11,7 +11,7 @@ import useScrollObserver from '../hooks/useScrollObserver';
 export default function BaseLayout() {
    const location = useLocation()
 
-   const [active, setActive] = useState(location.pathname === '/' ? 'home' : location.pathname.slice(1, location.pathname.length));
+   const [active, setActive] = useState(location.pathname === '/' ? 'protfolio' : location.pathname.slice(1, location.pathname.length));
    const refHome = useScrollObserver(setActive);
    const refAbout = useScrollObserver(setActive);
    const refPortfolio = useScrollObserver(setActive);

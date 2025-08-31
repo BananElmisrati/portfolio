@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Style from './Navbar.module.scss';
-import Toggler from "./home/Toggler";
+import Toggler from "./portfolio/Toggler";
 import { useLocation } from "react-router-dom";
 import { HashLink as Link } from 'react-router-hash-link';
 import { Box } from "@mui/material";
@@ -9,17 +9,12 @@ import { singlePage } from '../info/Info';
 
 const links = [
     {
-        name: 'Home',
-        to: '',
-        active: 'home'
+        name: 'Portfolio',
+        to: 'portfolio',
+        active: 'portfolio'
     },
 
-    {
-        name: info.initials,
-        type: 'initials',
-        to: '',
-        active: 'home'
-    },
+
 
       {
         name: 'Skills',
@@ -28,8 +23,8 @@ const links = [
     },
     {
         name: 'Projects',
-        to: 'portfolio',
-        active: 'portfolio'
+        to: 'projects',
+        active: 'projects'
     }
 ]
 
