@@ -10,7 +10,7 @@ export default function Projects({innerRef}) {
             <Grid container display={'flex'} justifyContent={'center'}>
                 {info.portfolio.map((project, index) => (
                    <Grid item xs={12} md={6} key={index}>
-                       <PortfolioBlock image={project.image} live={project.live} source={project.source} title={project.title} createdFor={project.createdFor} description={project.description} logo={project.logo} bgColor={project.bgColor} />
+                       <PortfolioBlock image={project.image} live={project.live} source={project.source} title={project.title} createdFor={project.createdFor} description={project.description} logo={project.logo} bgColor={project.bgColor} logoIcon={project.logoIcon} />
                    </Grid>
                 ))}
             </Grid>

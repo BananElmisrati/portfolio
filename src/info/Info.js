@@ -75,6 +75,7 @@ export const info = {
             source: "https://github.com/paytonjewell", // this should be a link to the **repository** of the project, where the code is hosted.
             description: "At Material Insights, I developed mi-Database—a data management and visualization platform designed to help businesses organize, query, and analyze large datasets efficiently. It provides an intuitive interface for importing, cleaning, and transforming data, alongside built-in charting and reporting features. The tool integrates with multiple database systems, supports role-based access control, and offers automated data refresh scheduling, enabling teams to make data-driven decisions faster and with greater accuracy.",
             logo: "	https://d3sw8n59epysgp.cloudfront.net/images/mi-database-wo.png",
+            logoIcon: "https://d3sw8n59epysgp.cloudfront.net/images/mi-database-go.png",
             bgColor: "#3c3c3c	"
         },
         {
@@ -83,6 +84,8 @@ export const info = {
             live: "https://mat-insights.com/", //this should be a link to the live version of your project, think github pages, netlify, heroku, etc. Or your own domain, if you have it.
             description: "At Material Insights, I revamped MI—the company main website enhancing the website’s user experience, visual design, and clarity—making the platform more intuitive and visually appealing while ensuring information is accessible and engaging.",
             logo: "https://d3sw8n59epysgp.cloudfront.net/images/mi-ow.webp",
+            logoIcon: "https://d3sw8n59epysgp.cloudfront.net/images/mi-og.webp",
+
             bgColor: "#3c3c3c		"
         },
 

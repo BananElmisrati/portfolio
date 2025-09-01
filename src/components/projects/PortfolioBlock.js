@@ -13,7 +13,7 @@ import CloseIcon from '@mui/icons-material/Close'; // ✅ Import Close Icon
 
 
 function PortfolioBlock(props) {
-   const { image, live, source, title, createdFor, logo, description,bgColor } = props;
+   const { image, live, source, title, createdFor, logo, description,bgColor,logoIcon } = props;
    const [openDialog, setOpenDialog] = useState(false);
 
    const handleOpen = () => setOpenDialog(true);
@@ -57,7 +57,7 @@ function PortfolioBlock(props) {
                <DialogTitle>
                   <Box display="flex" alignItems="center" justifyContent="space-between">
                      {/* Logo */}
-                     {logo && <img src={logo} alt="Logo" style={{ height: '40px' }} />}
+                     {logoIcon && <img src={logoIcon} alt="Logo" style={{ height: '40px' }} />}
                      <IconButton onClick={handleClose}>
       <CloseIcon />
                      </IconButton>
