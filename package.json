@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.1.9",
     "ajv": "^8.11.0",
     "classnames": "^2.2.6",
+    "framer-motion": "^7.10.3",
     "moment": "^2.29.4",
     "node-forge": ">=1.3.0",
     "object-path": "^0.11.8",
@@ -30,8 +31,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",             
-    "deploy": "gh-pages -d build"           
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -50,9 +51,8 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
+    "gh-pages": "^5.0.0",
     "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.12",
-    "gh-pages": "^5.0.0"                      
+    "tailwindcss": "^4.1.12"
   }
-  
 }
