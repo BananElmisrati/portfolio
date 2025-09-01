@@ -91,5 +91,5 @@ export const info = {
 
 
     ],
-    resume: "https://drive.google.com/file/d/1MlE2VuagKbf3p1qsaS5nXww8c7vV_DTI/view?usp=sharing",
+    resume: "https://drive.google.com/file/d/1pSGWLJYe_0UTmpR2C4otA2nzsH3aaxI7/view?usp=sharing",
 }
