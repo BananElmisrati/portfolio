@@ -43,7 +43,7 @@ export const info = {
         },
         {
             emoji: "💼",
-            text: "Software Development Engineer at Material Insights"
+            text: "Software Development Engineer"
         },
         {
             emoji: "📧",
